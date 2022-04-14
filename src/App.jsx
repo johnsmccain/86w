@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", transition: "all 0.37s" }}>
       <Top>
         <Navbar>86w Calculator</Navbar>
         <Screen>
@@ -69,7 +69,8 @@ function App() {
               )
             )}
         </Detail>
-        <Button onClick={() => setIsVisible(false)}>close</Button>
+        {isVisble &&
+        <Button onClick={() => setIsVisible(false)}>close</Button>}
       </Top>
       <Container>
         <Form onSubmit={(e) => handleSubmit(e)}>
