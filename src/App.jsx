@@ -69,8 +69,9 @@ function App() {
               )
             )}
         </Detail>
-        {isVisble &&
-        <Button onClick={() => setIsVisible(false)}>close</Button>}
+        {isVisible && (
+          <Button onClick={() => setIsVisible(false)}>close</Button>
+        )}
       </Top>
       <Container>
         <Form onSubmit={(e) => handleSubmit(e)}>
